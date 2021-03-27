@@ -6,93 +6,725 @@
     </button>
   </div>
   <div class="mt-3">
-    <div style="visibility: hidden; position: absolute; width: 0px; height: 0px;">
-        <svg xmlns="http://www.w3.org/2000/svg">
-          <symbol viewBox="0 0 24 24" id="expand-more">
-            <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
-            <path d="M0 0h24v24H0z" fill="none" />
-          </symbol>
-          <symbol viewBox="0 0 24 24" id="close">
-            <path
-              d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
-            />
-            <path d="M0 0h24v24H0z" fill="none" />
-          </symbol>
+    <div
+      style="visibility: hidden; position: absolute; width: 0px; height: 0px;"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg">
+        <symbol viewBox="0 0 24 24" id="expand-more">
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
+          <path d="M0 0h24v24H0z" fill="none" />
+        </symbol>
+        <symbol viewBox="0 0 24 24" id="close">
+          <path
+            d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+          />
+          <path d="M0 0h24v24H0z" fill="none" />
+        </symbol>
+      </svg>
+    </div>
+    <details>
+      <summary>
+        account
+        <svg
+          class="control-icon control-icon-expand"
+          width="24"
+          height="24"
+          role="presentation"
+        >
+          <use
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xlink:href="#expand-more"
+          />
         </svg>
-      </div>
-      <details >
-        <summary>
-            account
-          <svg
-            class="control-icon control-icon-expand"
-            width="24"
-            height="24"
-            role="presentation"
-          >
-            <use
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              xlink:href="#expand-more"
-            />
-          </svg>
-          <svg
-            class="control-icon control-icon-close"
-            width="24"
-            height="24"
-            role="presentation"
-          >
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" />
-          </svg>
-        </summary>
-        <hr />
-        <table class="table">
-            <tbody>
-                <tr>
-                  <td>Id</td>
-                  <td>{{account.id}}</td>
-                </tr>
-                <tr>
-                    <td>nome</td>
-                    <td>{{account.name}}</td>
-                  </tr>
-              </tbody>
-        </table>
-      </details>
-      <details >
-        <summary>
-            BattlePass
-          <svg
-            class="control-icon control-icon-expand"
-            width="24"
-            height="24"
-            role="presentation"
-          >
-            <use
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              xlink:href="#expand-more"
-            />
-          </svg>
-          <svg
-            class="control-icon control-icon-close"
-            width="24"
-            height="24"
-            role="presentation"
-          >
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" />
-          </svg>
-        </summary>
-        <hr />
-        <table class="table">
-            <tbody>
-                <tr>
-                  <td>livello</td>
-                  <td>{{battlePass.level}}</td>
-                </tr>
-                <tr>
-                    <td>progressi</td>
-                    <td>{{battlePass.progress}}</td>
-                  </tr>
-              </tbody>
-        </table>
-      </details>
+        <svg
+          class="control-icon control-icon-close"
+          width="24"
+          height="24"
+          role="presentation"
+        >
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" />
+        </svg>
+      </summary>
+      <hr />
+      <table class="table">
+        <tbody>
+          <tr>
+            <td>Id</td>
+            <td>{{ account.id }}</td>
+          </tr>
+          <tr>
+            <td>nome</td>
+            <td>{{ account.name }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </details>
+    <details>
+      <summary>
+        BattlePass
+        <svg
+          class="control-icon control-icon-expand"
+          width="24"
+          height="24"
+          role="presentation"
+        >
+          <use
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xlink:href="#expand-more"
+          />
+        </svg>
+        <svg
+          class="control-icon control-icon-close"
+          width="24"
+          height="24"
+          role="presentation"
+        >
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" />
+        </svg>
+      </summary>
+      <hr />
+      <table class="table">
+        <tbody>
+          <tr>
+            <td>livello</td>
+            <td>{{ battlePass.level }}</td>
+          </tr>
+          <tr>
+            <td>progressi</td>
+            <td>{{ battlePass.progress }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </details>
+    <details>
+      <summary>
+        stats overall
+        <svg
+          class="control-icon control-icon-expand"
+          width="24"
+          height="24"
+          role="presentation"
+        >
+          <use
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xlink:href="#expand-more"
+          />
+        </svg>
+        <svg
+          class="control-icon control-icon-close"
+          width="24"
+          height="24"
+          role="presentation"
+        >
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" />
+        </svg>
+      </summary>
+      <hr />
+      <table class="table">
+        <tbody>
+          <tr>
+            <td>score</td>
+            <td>{{ stats?.all?.overall?.score }}</td>
+          </tr>
+          <tr>
+            <td>scorePerMin</td>
+            <td>{{ stats?.all?.overall?.scorePerMin }}</td>
+          </tr>
+          <tr>
+            <td>scorePerMatch</td>
+            <td>{{ stats?.all?.overall?.scorePerMatch }}</td>
+          </tr>
+          <tr>
+            <td>wins</td>
+            <td>{{ stats?.all?.overall?.wins }}</td>
+          </tr>
+          <tr>
+            <td>top3</td>
+            <td>{{ stats?.all?.overall?.top3 }}</td>
+          </tr>
+          <tr>
+            <td>top5</td>
+            <td>{{ stats?.all?.overall?.top5 }}</td>
+          </tr>
+          <tr>
+            <td>top6</td>
+            <td>{{ stats?.all?.overall?.top6 }}</td>
+          </tr>
+          <tr>
+            <td>top10</td>
+            <td>{{ stats?.all?.overall?.top10 }}</td>
+          </tr>
+          <tr>
+            <td>top12</td>
+            <td>{{ stats?.all?.overall?.top12 }}</td>
+          </tr>
+          <tr>
+            <td>top25</td>
+            <td>{{ stats?.all?.overall?.top25 }}</td>
+          </tr>
+          <tr>
+            <td>kills</td>
+            <td>{{ stats?.all?.overall?.kills }}</td>
+          </tr>
+          <tr>
+            <td>killsPerMin</td>
+            <td>{{ stats?.all?.overall?.killsPerMin }}</td>
+          </tr>
+          <tr>
+            <td>killsPerMatch</td>
+            <td>{{ stats?.all?.overall?.killsPerMatch }}</td>
+          </tr>
+          <tr>
+            <td>deaths</td>
+            <td>{{ stats?.all?.overall?.deaths }}</td>
+          </tr>
+          <tr>
+            <td>kd</td>
+            <td>{{ stats?.all?.overall?.kd }}</td>
+          </tr>
+          <tr>
+            <td>matches</td>
+            <td>{{ stats?.all?.overall?.matches }}</td>
+          </tr>
+          <tr>
+            <td>winRate</td>
+            <td>{{ stats?.all?.overall?.winRate }}</td>
+          </tr>
+          <tr>
+            <td>minutesPlayed</td>
+            <td>{{ stats?.all?.overall?.minutesPlayed }}</td>
+          </tr>
+          <tr>
+            <td>playersOutlived</td>
+            <td>{{ stats?.all?.overall?.playersOutlived }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </details>
+    <details>
+      <summary>
+        stats solo
+        <svg
+          class="control-icon control-icon-expand"
+          width="24"
+          height="24"
+          role="presentation"
+        >
+          <use
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xlink:href="#expand-more"
+          />
+        </svg>
+        <svg
+          class="control-icon control-icon-close"
+          width="24"
+          height="24"
+          role="presentation"
+        >
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" />
+        </svg>
+      </summary>
+      <hr />
+      <table class="table">
+        <tbody>
+          <tr>
+            <td>score</td>
+            <td>{{ stats?.all?.solo?.score }}</td>
+          </tr>
+          <tr>
+            <td>scorePerMin</td>
+            <td>{{ stats?.all?.solo?.scorePerMin }}</td>
+          </tr>
+          <tr>
+            <td>scorePerMatch</td>
+            <td>{{ stats?.all?.solo?.scorePerMatch }}</td>
+          </tr>
+          <tr>
+            <td>wins</td>
+            <td>{{ stats?.all?.solo?.wins }}</td>
+          </tr>
+          <tr>
+            <td>top3</td>
+            <td>{{ stats?.all?.solo?.top3 }}</td>
+          </tr>
+          <tr>
+            <td>top5</td>
+            <td>{{ stats?.all?.solo?.top5 }}</td>
+          </tr>
+          <tr>
+            <td>top6</td>
+            <td>{{ stats?.all?.solo?.top6 }}</td>
+          </tr>
+          <tr>
+            <td>top10</td>
+            <td>{{ stats?.all?.solo?.top10 }}</td>
+          </tr>
+          <tr>
+            <td>top12</td>
+            <td>{{ stats?.all?.solo?.top12 }}</td>
+          </tr>
+          <tr>
+            <td>top25</td>
+            <td>{{ stats?.all?.solo?.top25 }}</td>
+          </tr>
+          <tr>
+            <td>kills</td>
+            <td>{{ stats?.all?.solo?.kills }}</td>
+          </tr>
+          <tr>
+            <td>killsPerMin</td>
+            <td>{{ stats?.all?.solo?.killsPerMin }}</td>
+          </tr>
+          <tr>
+            <td>killsPerMatch</td>
+            <td>{{ stats?.all?.solo?.killsPerMatch }}</td>
+          </tr>
+          <tr>
+            <td>deaths</td>
+            <td>{{ stats?.all?.solo?.deaths }}</td>
+          </tr>
+          <tr>
+            <td>kd</td>
+            <td>{{ stats?.all?.solo?.kd }}</td>
+          </tr>
+          <tr>
+            <td>matches</td>
+            <td>{{ stats?.all?.solo?.matches }}</td>
+          </tr>
+          <tr>
+            <td>winRate</td>
+            <td>{{ stats?.all?.solo?.winRate }}</td>
+          </tr>
+          <tr>
+            <td>minutesPlayed</td>
+            <td>{{ stats?.all?.solo?.minutesPlayed }}</td>
+          </tr>
+          <tr>
+            <td>playersOutlived</td>
+            <td>{{ stats?.all?.solo?.playersOutlived }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </details>
+    <details>
+      <summary>
+        stats duo
+        <svg
+          class="control-icon control-icon-expand"
+          width="24"
+          height="24"
+          role="presentation"
+        >
+          <use
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xlink:href="#expand-more"
+          />
+        </svg>
+        <svg
+          class="control-icon control-icon-close"
+          width="24"
+          height="24"
+          role="presentation"
+        >
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" />
+        </svg>
+      </summary>
+      <hr />
+      <table class="table">
+        <tbody>
+          <tr>
+            <td>score</td>
+            <td>{{ stats?.all?.duo?.score }}</td>
+          </tr>
+          <tr>
+            <td>scorePerMin</td>
+            <td>{{ stats?.all?.duo?.scorePerMin }}</td>
+          </tr>
+          <tr>
+            <td>scorePerMatch</td>
+            <td>{{ stats?.all?.duo?.scorePerMatch }}</td>
+          </tr>
+          <tr>
+            <td>wins</td>
+            <td>{{ stats?.all?.duo?.wins }}</td>
+          </tr>
+          <tr>
+            <td>top3</td>
+            <td>{{ stats?.all?.duo?.top3 }}</td>
+          </tr>
+          <tr>
+            <td>top5</td>
+            <td>{{ stats?.all?.duo?.top5 }}</td>
+          </tr>
+          <tr>
+            <td>top6</td>
+            <td>{{ stats?.all?.duo?.top6 }}</td>
+          </tr>
+          <tr>
+            <td>top10</td>
+            <td>{{ stats?.all?.duo?.top10 }}</td>
+          </tr>
+          <tr>
+            <td>top12</td>
+            <td>{{ stats?.all?.duo?.top12 }}</td>
+          </tr>
+          <tr>
+            <td>top25</td>
+            <td>{{ stats?.all?.duo?.top25 }}</td>
+          </tr>
+          <tr>
+            <td>kills</td>
+            <td>{{ stats?.all?.duo?.kills }}</td>
+          </tr>
+          <tr>
+            <td>killsPerMin</td>
+            <td>{{ stats?.all?.duo?.killsPerMin }}</td>
+          </tr>
+          <tr>
+            <td>killsPerMatch</td>
+            <td>{{ stats?.all?.duo?.killsPerMatch }}</td>
+          </tr>
+          <tr>
+            <td>deaths</td>
+            <td>{{ stats?.all?.duo?.deaths }}</td>
+          </tr>
+          <tr>
+            <td>kd</td>
+            <td>{{ stats?.all?.duo?.kd }}</td>
+          </tr>
+          <tr>
+            <td>matches</td>
+            <td>{{ stats?.all?.duo?.matches }}</td>
+          </tr>
+          <tr>
+            <td>winRate</td>
+            <td>{{ stats?.all?.duo?.winRate }}</td>
+          </tr>
+          <tr>
+            <td>minutesPlayed</td>
+            <td>{{ stats?.all?.duo?.minutesPlayed }}</td>
+          </tr>
+          <tr>
+            <td>playersOutlived</td>
+            <td>{{ stats?.all?.duo?.playersOutlived }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </details>
+    <details>
+      <summary>
+        stats trio
+        <svg
+          class="control-icon control-icon-expand"
+          width="24"
+          height="24"
+          role="presentation"
+        >
+          <use
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xlink:href="#expand-more"
+          />
+        </svg>
+        <svg
+          class="control-icon control-icon-close"
+          width="24"
+          height="24"
+          role="presentation"
+        >
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" />
+        </svg>
+      </summary>
+      <hr />
+      <table class="table">
+        <tbody>
+          <tr>
+            <td>score</td>
+            <td>{{ stats?.all?.trio?.score }}</td>
+          </tr>
+          <tr>
+            <td>scorePerMin</td>
+            <td>{{ stats?.all?.trio?.scorePerMin }}</td>
+          </tr>
+          <tr>
+            <td>scorePerMatch</td>
+            <td>{{ stats?.all?.trio?.scorePerMatch }}</td>
+          </tr>
+          <tr>
+            <td>wins</td>
+            <td>{{ stats?.all?.trio?.wins }}</td>
+          </tr>
+          <tr>
+            <td>top3</td>
+            <td>{{ stats?.all?.trio?.top3 }}</td>
+          </tr>
+          <tr>
+            <td>top5</td>
+            <td>{{ stats?.all?.trio?.top5 }}</td>
+          </tr>
+          <tr>
+            <td>top6</td>
+            <td>{{ stats?.all?.trio?.top6 }}</td>
+          </tr>
+          <tr>
+            <td>top10</td>
+            <td>{{ stats?.all?.trio?.top10 }}</td>
+          </tr>
+          <tr>
+            <td>top12</td>
+            <td>{{ stats?.all?.trio?.top12 }}</td>
+          </tr>
+          <tr>
+            <td>top25</td>
+            <td>{{ stats?.all?.trio?.top25 }}</td>
+          </tr>
+          <tr>
+            <td>kills</td>
+            <td>{{ stats?.all?.trio?.kills }}</td>
+          </tr>
+          <tr>
+            <td>killsPerMin</td>
+            <td>{{ stats?.all?.trio?.killsPerMin }}</td>
+          </tr>
+          <tr>
+            <td>killsPerMatch</td>
+            <td>{{ stats?.all?.trio?.killsPerMatch }}</td>
+          </tr>
+          <tr>
+            <td>deaths</td>
+            <td>{{ stats?.all?.trio?.deaths }}</td>
+          </tr>
+          <tr>
+            <td>kd</td>
+            <td>{{ stats?.all?.trio?.kd }}</td>
+          </tr>
+          <tr>
+            <td>matches</td>
+            <td>{{ stats?.all?.trio?.matches }}</td>
+          </tr>
+          <tr>
+            <td>winRate</td>
+            <td>{{ stats?.all?.trio?.winRate }}</td>
+          </tr>
+          <tr>
+            <td>minutesPlayed</td>
+            <td>{{ stats?.all?.trio?.minutesPlayed }}</td>
+          </tr>
+          <tr>
+            <td>playersOutlived</td>
+            <td>{{ stats?.all?.trio?.playersOutlived }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </details>
+    <details>
+      <summary>
+        stats squad
+        <svg
+          class="control-icon control-icon-expand"
+          width="24"
+          height="24"
+          role="presentation"
+        >
+          <use
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xlink:href="#expand-more"
+          />
+        </svg>
+        <svg
+          class="control-icon control-icon-close"
+          width="24"
+          height="24"
+          role="presentation"
+        >
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" />
+        </svg>
+      </summary>
+      <hr />
+      <table class="table">
+        <tbody>
+          <tr>
+            <td>score</td>
+            <td>{{ stats?.all?.squad?.score }}</td>
+          </tr>
+          <tr>
+            <td>scorePerMin</td>
+            <td>{{ stats?.all?.squad?.scorePerMin }}</td>
+          </tr>
+          <tr>
+            <td>scorePerMatch</td>
+            <td>{{ stats?.all?.squad?.scorePerMatch }}</td>
+          </tr>
+          <tr>
+            <td>wins</td>
+            <td>{{ stats?.all?.squad?.wins }}</td>
+          </tr>
+          <tr>
+            <td>top3</td>
+            <td>{{ stats?.all?.squad?.top3 }}</td>
+          </tr>
+          <tr>
+            <td>top5</td>
+            <td>{{ stats?.all?.squad?.top5 }}</td>
+          </tr>
+          <tr>
+            <td>top6</td>
+            <td>{{ stats?.all?.squad?.top6 }}</td>
+          </tr>
+          <tr>
+            <td>top10</td>
+            <td>{{ stats?.all?.squad?.top10 }}</td>
+          </tr>
+          <tr>
+            <td>top12</td>
+            <td>{{ stats?.all?.squad?.top12 }}</td>
+          </tr>
+          <tr>
+            <td>top25</td>
+            <td>{{ stats?.all?.squad?.top25 }}</td>
+          </tr>
+          <tr>
+            <td>kills</td>
+            <td>{{ stats?.all?.squad?.kills }}</td>
+          </tr>
+          <tr>
+            <td>killsPerMin</td>
+            <td>{{ stats?.all?.squad?.killsPerMin }}</td>
+          </tr>
+          <tr>
+            <td>killsPerMatch</td>
+            <td>{{ stats?.all?.squad?.killsPerMatch }}</td>
+          </tr>
+          <tr>
+            <td>deaths</td>
+            <td>{{ stats?.all?.squad?.deaths }}</td>
+          </tr>
+          <tr>
+            <td>kd</td>
+            <td>{{ stats?.all?.squad?.kd }}</td>
+          </tr>
+          <tr>
+            <td>matches</td>
+            <td>{{ stats?.all?.squad?.matches }}</td>
+          </tr>
+          <tr>
+            <td>winRate</td>
+            <td>{{ stats?.all?.squad?.winRate }}</td>
+          </tr>
+          <tr>
+            <td>minutesPlayed</td>
+            <td>{{ stats?.all?.squad?.minutesPlayed }}</td>
+          </tr>
+          <tr>
+            <td>playersOutlived</td>
+            <td>{{ stats?.all?.squad?.playersOutlived }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </details>
+    <details>
+      <summary>
+        stats lmt
+        <svg
+          class="control-icon control-icon-expand"
+          width="24"
+          height="24"
+          role="presentation"
+        >
+          <use
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xlink:href="#expand-more"
+          />
+        </svg>
+        <svg
+          class="control-icon control-icon-close"
+          width="24"
+          height="24"
+          role="presentation"
+        >
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" />
+        </svg>
+      </summary>
+      <hr />
+      <table class="table">
+        <tbody>
+          <tr>
+            <td>score</td>
+            <td>{{ stats?.all?.lmt?.score }}</td>
+          </tr>
+          <tr>
+            <td>scorePerMin</td>
+            <td>{{ stats?.all?.lmt?.scorePerMin }}</td>
+          </tr>
+          <tr>
+            <td>scorePerMatch</td>
+            <td>{{ stats?.all?.lmt?.scorePerMatch }}</td>
+          </tr>
+          <tr>
+            <td>wins</td>
+            <td>{{ stats?.all?.lmt?.wins }}</td>
+          </tr>
+          <tr>
+            <td>top3</td>
+            <td>{{ stats?.all?.lmt?.top3 }}</td>
+          </tr>
+          <tr>
+            <td>top5</td>
+            <td>{{ stats?.all?.lmt?.top5 }}</td>
+          </tr>
+          <tr>
+            <td>top6</td>
+            <td>{{ stats?.all?.lmt?.top6 }}</td>
+          </tr>
+          <tr>
+            <td>top10</td>
+            <td>{{ stats?.all?.lmt?.top10 }}</td>
+          </tr>
+          <tr>
+            <td>top12</td>
+            <td>{{ stats?.all?.lmt?.top12 }}</td>
+          </tr>
+          <tr>
+            <td>top25</td>
+            <td>{{ stats?.all?.lmt?.top25 }}</td>
+          </tr>
+          <tr>
+            <td>kills</td>
+            <td>{{ stats?.all?.lmt?.kills }}</td>
+          </tr>
+          <tr>
+            <td>killsPerMin</td>
+            <td>{{ stats?.all?.lmt?.killsPerMin }}</td>
+          </tr>
+          <tr>
+            <td>killsPerMatch</td>
+            <td>{{ stats?.all?.lmt?.killsPerMatch }}</td>
+          </tr>
+          <tr>
+            <td>deaths</td>
+            <td>{{ stats?.all?.lmt?.deaths }}</td>
+          </tr>
+          <tr>
+            <td>kd</td>
+            <td>{{ stats?.all?.lmt?.kd }}</td>
+          </tr>
+          <tr>
+            <td>matches</td>
+            <td>{{ stats?.all?.lmt?.matches }}</td>
+          </tr>
+          <tr>
+            <td>winRate</td>
+            <td>{{ stats?.all?.lmt?.winRate }}</td>
+          </tr>
+          <tr>
+            <td>minutesPlayed</td>
+            <td>{{ stats?.all?.lmt?.minutesPlayed }}</td>
+          </tr>
+          <tr>
+            <td>playersOutlived</td>
+            <td>{{ stats?.all?.lmt?.playersOutlived }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </details>
   </div>
 </div>
